@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   get '/signup', to: "access#signup", as: 'signup'
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+
+  get 'auth/failure', to: redirect('/')
+
   post '/login', to: "access#attempt_login"
 
   post '/signup', to: "access#create"

@@ -1,5 +1,6 @@
 class AccessController < ApplicationController
-before_action :prevent_login_signup, only: [:signup, :login] #only on the sign up and login pages if you already have a user_id
+before_action :prevent_login_signup, only: [:signup, :login] #only on the sign up and login pages if
+#you already have a user_id
 
   def signup
     @user= User.new
